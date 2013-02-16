@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  .row-fluid.callout
+    .container
+      .row-fluid.homesection.hidden-tablet.hidden-mobile
+        .span8
+          h4 Sobre
+          p I will put something here
+          p
+            a.m-btn.blue(href="#") Read More
+        .span3.offset1.social.hidden-phone
+          .row
+            .span4
+              a(href="#")
+                img(src="/static/img/social/Facebook.png",
+                    alt="Facebook"
+                )
+            .span4
+              a(href="#")
+                img(src="/static/img/social/Github.png",
+                    alt="Github"
+                )
+            .span4
+              a(href="#")
+                img(src="/static/img/social/Twitter.png",
+                    alt="Twitter"
+                )
+            .span4
+              a(href="#")
+                img(src="/static/img/social/Linkedin.png",
+                    alt="Linkedin"
+                )
+      .row-fluid.homesection.hidden-desktop
+        .hidden-desktop.hidden-phone
+          .span2
+            a(href="#")
+              img(src="/static/img/social/Facebook.png",
+                  alt="Facebook"
+              )
+          .span2
+            a(href="#")
+              img(src="/static/img/social/Github.png",
+                  alt="Github"
+              )
+          .span2
+            a(href="#")
+              img(src="/static/img/social/Twitter.png",
+                  alt="Twitter"
+              )
+          .span2
+            a(href="#")
+              img(src="/static/img/social/Linkedin.png",
+                  alt="Linkedin"
+              )
+      .row-fluid.news
+        h2 Novidades
+      .row-fluid
+        .span3
+          a(href="blog.html")
+            img.member(src="", alt="")
+          h4 Título
+          p Corpo

@@ -1,0 +1,63 @@
+!!!
+html(lang="pt-BR")
+  head
+    meta(charset="utf-8")
+    title
+      block pagetitle
+        | #{locals.pagetitle}
+    for key, value in locals.meta
+      meta(name=key, content=value)
+
+    block headstyle
+      for stylehref in locals.basecss
+        link(rel="stylesheet", href=stylehref)
+
+    //if lt IE 9
+      script(src="/static/js/html5.js")
+
+    link(rel="shortcut icon", href="/static/img/favicon.ico")
+    for applefav in locals.favicons
+      link(rel=applefav.rel, sizes=applefav.sizes, href=applefav.href)
+
+  body
+    .row.header
+      nav.navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            a.btn.btn-navbar.btntop(data-toggle="collapse",
+                data-target=".nav-collapse"
+            ) Navega&ccedil;&atilde;o
+
+            h1.brand.hidden-phone.hidden-tablet
+              a(href="/")
+                img(src="/static/img/log.png",
+                    alt="Desculpem-nos pelo transtorno"
+                )
+
+            .nav-collapse
+              ul.nav.pull-right
+                li
+                  a.active(href="/")
+                    | Home
+                li
+                  a(href="/sobre")
+                    | Sobre
+                li
+                  a(href="/blog")
+                    | Blog
+                li
+                  a(href="/portfolio")
+                    | Portf&oacute;lio
+    .pagination-centered.mobilelogo.hidden-desktop
+      a(href="/")
+        img(src="/static/img/logo_mobile.png",
+            alt="Desculpem-nos pelo transtorno"
+        )
+    block content
+    .row-fluid
+      .container.footer
+        .span4.address
+          | Someday I will put something here
+        .span5.pull-right.footer-newsletter
+          h2 I also will put something here
+          p Yeah baby

@@ -1,4 +1,3 @@
-joaodubas.me
-============
+# joaodubas.me
 
-Personal site.
+Meu website/blog/whatever.

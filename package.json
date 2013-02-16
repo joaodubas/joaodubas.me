@@ -1,0 +1,21 @@
+{
+  "name": "personal-blog",
+  "version": "0.0.1",
+  "author": "João Paulo Dubas <joao.dubas@gmail.com>",
+  "description": "Desculpem-nos pelo transtorno",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joaodubas/joaodubas.me.git"
+  },
+  "dependencies": {
+    "http-server": "~0.5.3",
+    "wintersmith": "~1.2.2",
+    "optmist": "~0.3.5"
+  },
+  "scripts": {
+    "start": "node ./bin/server"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}

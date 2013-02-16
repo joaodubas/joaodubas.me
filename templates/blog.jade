@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  - var posts = _.chain(
+  -   contents.posts._.directories
+  - ).filter(function(item) {
+  -   return (item.index.metadata.status === "published")
+  - }).map(function(item) {
+  -   return item.index
+  - }).compact().sortBy(function(item) { // compact removes any dirs w/o an index
+  -   return -item.date
+  - }).first(locals.index_posts).value() // and finally take the first 5
+
+  #blog.row-fluid.section
+    .container
+      .explain
+        h2 Blog
+        p.intro Desculpem-nos pelo transtorno
+
+        .row-fluid
+          .span9.blog_entry
+            for post in posts
+              article
+                a.member(href=post.url)
+                  img(src=post.metadata.header_img,
+                      alt=post.metadata.header_alt
+                  )
+          .span3.sidebar

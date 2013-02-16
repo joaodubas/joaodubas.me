@@ -1,0 +1,8 @@
+{
+  "output": "./public",
+  "contents": "./contents",
+  "templates": "./templates",
+  "locals": {
+    "index_posts": 5
+  }
+}
